@@ -1,0 +1,193 @@
+[{
+    "productName":"iPhone 6",
+    "internalName":"N61",
+    "cpid":7000,
+    "bdid":6
+},
+{
+    "productName":"iPhone X",
+    "internalName":"D221",
+    "cpid":8015,
+    "bdid":6
+},
+{
+    "productName":"iPhone X",
+    "internalName":"D221",
+    "cpid":8015,
+    "bdid":14
+},
+{
+    "productName":"iPhone 8 Plus",
+    "internalName":"D21",
+    "cpid":8015,
+    "bdid":12
+},
+{
+    "productName":"iPhone 8 Plus",
+    "internalName":"D21",
+    "cpid":8015,
+    "bdid":4
+},
+{
+    "productName":"iPhone 8",
+    "internalName":"D20",
+    "cpid":8015,
+    "bdid":10
+},
+{
+    "productName":"iPhone 8",
+    "internalName":"D20",
+    "cpid":8015,
+    "bdid":2
+},
+{
+    "productName":"iPhone 7 Plus",
+    "internalName":"D111",
+    "cpid":8010,
+    "bdid":10
+},
+{
+    "productName":"iPhone 7 Plus",
+    "internalName":"D111",
+    "cpid":8010,
+    "bdid":14
+},
+{
+    "productName":"iPhone 7",
+    "internalName":"D101",
+    "cpid":8010,
+    "bdid":8
+},
+{
+    "productName":"iPhone 7",
+    "internalName":"D101",
+    "cpid":8010,
+    "bdid":12
+},
+{
+    "productName":"iPhone SE",
+    "internalName":"N69",
+    "cpid":8003,
+    "bdid":2
+},
+{
+    "productName":"iPhone SE",
+    "internalName":"N69U",
+    "cpid":8000,
+    "bdid":2
+},
+{
+    "productName":"iPhone 6S Plus",
+    "internalName":"N66M",
+    "cpid":8003,
+    "bdid":6
+},
+{
+    "productName":"iPhone 6S Plus",
+    "internalName":"N66",
+    "cpid":8000,
+    "bdid":6
+},
+{
+    "productName":"iPhone 6S",
+    "internalName":"N71M",
+    "cpid":8003,
+    "bdid":4
+},
+{
+    "productName":"iPhone 6S",
+    "internalName":"N71",
+    "cpid":8000,
+    "bdid":4
+},
+{
+    "productName":"iPhone 6 Plus",
+    "internalName":"N56",
+    "cpid":7000,
+    "bdid":4
+},
+{
+    "productName":"iPad 5",
+    "internalName":"J71S",
+    "cpid":8000,
+    "bdid":16
+},
+{
+    "productName":"iPad 5",
+    "internalName":"J71S",
+    "cpid":8000,
+    "bdid":18
+},
+{
+    "productName":"iPad 5",
+    "internalName":"J71T",
+    "cpid":8000,
+    "bdid":16
+},
+{
+    "productName":"iPad 5",
+    "internalName":"J71T",
+    "cpid":8000,
+    "bdid":18
+},
+{
+    "productName":"iPad 6",
+    "internalName":"J71B",
+    "cpid":8010,
+    "bdid":24
+},
+{
+    "productName":"iPad 6",
+    "internalName":"J71B",
+    "cpid":8010,
+    "bdid":26
+},
+{
+    "productName":"iPad mini 4",
+    "internalName":"J96",
+    "cpid":7000,
+    "bdid":8
+},
+{
+    "productName":"iPad mini 4",
+    "internalName":"J96",
+    "cpid":7000,
+    "bdid":10
+},
+{
+    "productName":"iPad Pro 2nd Gen 12.9'",
+    "internalName":"J120",
+    "cpid":8011,
+    "bdid":12
+},
+{
+    "productName":"iPad Pro 2nd Gen 12.9'",
+    "internalName":"J120",
+    "cpid":8011,
+    "bdid":14
+},
+{
+    "productName":"iPad Pro 10.5'",
+    "internalName":"J207",
+    "cpid":8011,
+    "bdid":4
+},
+{
+    "productName":"iPad Pro 10.5'",
+    "internalName":"J207",
+    "cpid":8011,
+    "bdid":6
+},
+{
+    "productName":"iPad Air 2",
+    "internalName":"J207",
+    "cpid":7001,
+    "bdid":6
+},
+{
+    "productName":"iPad Air 2",
+    "internalName":"J81",
+    "cpid":7001,
+    "bdid":2
+}
+]
