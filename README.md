@@ -63,7 +63,7 @@ Short summary:
 - Pure Swift.
 - Just the editor.
 
-To enter purple / diags mode, use Purple Pro by 1nsane_dev or a bootbox from far east of your choice...
+To enter purple / diags mode, use Purple Pro by 1nsane_dev or a bootbox of your choice from far east...
 
 The app makes it possible to read, write and restore important configuration data on iDevices, making it an important tool for hobbyists and professional repair stores. It requires no accessories except for a DCSD cable / adapter and is therefore much cheaper and faster to use than with conventional NAND programmers from the Far East.
 
