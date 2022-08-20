@@ -11,7 +11,6 @@
 		E4214CF624A63C5900763B57 /* devices.json in Resources */ = {isa = PBXBuildFile; fileRef = E4214CF524A63C5900763B57 /* devices.json */; };
 		E424D52D2493C3F300ECE732 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = E424D52C2493C3F300ECE732 /* ORSSerial */; };
 		E445927E24A6A06500605197 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E445927D24A6A06500605197 /* InfoViewController.swift */; };
-		E45352742853367300FB285E /* CircularProgress in Frameworks */ = {isa = PBXBuildFile; productRef = E45352732853367300FB285E /* CircularProgress */; };
 		E453527928534B1300FB285E /* BTNS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E453527828534B1300FB285E /* BTNS.xcassets */; };
 		E4793E072492B934000ED452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4793E062492B934000ED452 /* AppDelegate.swift */; };
 		E4793E0B2492B936000ED452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4793E0A2492B936000ED452 /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 		E48B41DF25974E040091370B /* YBFileLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B41DC25974E030091370B /* YBFileLogger.swift */; };
 		E48B41E025974E040091370B /* YBLoggerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B41DD25974E030091370B /* YBLoggerConfiguration.swift */; };
 		E48B41E125974E040091370B /* YBLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B41DE25974E040091370B /* YBLogger.swift */; };
-		E4931B0B28560DE800139D34 /* Menu in Frameworks */ = {isa = PBXBuildFile; productRef = E4931B0A28560DE800139D34 /* Menu */; };
 		E4B2F03D2893C5C60084ECF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B2F03C2893C5C60084ECF6 /* ViewController.swift */; };
 		E4C4EF982498D9C8004A2A84 /* Extensions&otherShit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C4EF972498D9C8004A2A84 /* Extensions&otherShit.swift */; };
 		E4DCEEEB249EC23000741608 /* RestoreBackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCEEEA249EC23000741608 /* RestoreBackupViewController.swift */; };
@@ -54,8 +52,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E424D52D2493C3F300ECE732 /* ORSSerial in Frameworks */,
-				E45352742853367300FB285E /* CircularProgress in Frameworks */,
-				E4931B0B28560DE800139D34 /* Menu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +134,6 @@
 			name = MagicCFG;
 			packageProductDependencies = (
 				E424D52C2493C3F300ECE732 /* ORSSerial */,
-				E45352732853367300FB285E /* CircularProgress */,
-				E4931B0A28560DE800139D34 /* Menu */,
 			);
 			productName = MagicCFG;
 			productReference = E4793E032492B934000ED452 /* MagicCFG.app */;
@@ -172,8 +166,6 @@
 			mainGroup = E4793DFA2492B934000ED452;
 			packageReferences = (
 				E424D52B2493C3F300ECE732 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
-				E45352722853367300FB285E /* XCRemoteSwiftPackageReference "CircularProgress" */,
-				E4931B0928560DE800139D34 /* XCRemoteSwiftPackageReference "Menu" */,
 			);
 			productRefGroup = E4793E042492B934000ED452 /* Products */;
 			projectDirPath = "";
@@ -487,22 +479,6 @@
 				minimumVersion = 2.1.0;
 			};
 		};
-		E45352722853367300FB285E /* XCRemoteSwiftPackageReference "CircularProgress" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/CircularProgress";
-			requirement = {
-				kind = exactVersion;
-				version = 2.2.0;
-			};
-		};
-		E4931B0928560DE800139D34 /* XCRemoteSwiftPackageReference "Menu" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/iSapozhnik/Menu";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -510,16 +486,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E424D52B2493C3F300ECE732 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
 			productName = ORSSerial;
-		};
-		E45352732853367300FB285E /* CircularProgress */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E45352722853367300FB285E /* XCRemoteSwiftPackageReference "CircularProgress" */;
-			productName = CircularProgress;
-		};
-		E4931B0A28560DE800139D34 /* Menu */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E4931B0928560DE800139D34 /* XCRemoteSwiftPackageReference "Menu" */;
-			productName = Menu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
