@@ -58,6 +58,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
+Short summary:
+- Simple SysCFG Editor written in Swift. 
+- Pure Swift.
+- Just the editor.
+
 The app makes it possible to read, write and restore important configuration data on iDevices, making it an important tool for hobbyists and professional repair stores. It requires no accessories except for a DCSD cable / adapter and is therefore much cheaper and faster to use than with conventional NAND programmers from the Far East.
 
 This tool is mostly written in Swift and interacts with the syscfg partition of iDevices. So be careful in usage and make sure you understand what you are doing!
