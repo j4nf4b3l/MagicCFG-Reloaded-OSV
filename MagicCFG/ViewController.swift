@@ -264,7 +264,7 @@ class ViewController: NSViewController, ORSSerialPortDelegate,NSTextFieldDelegat
     
     @IBAction func WriteRegion(_ sender: Any) {
         // Under development
-        var value = RegionField.stringValue
+        let value = RegionField.stringValue
         //value.removeDangerousCharsForSYSCFG()
         let command = "syscfg add Regn \(value)".data(using: .utf8)! + Data([0x0A])
         port.send(command)
@@ -453,14 +453,7 @@ class ViewController: NSViewController, ORSSerialPortDelegate,NSTextFieldDelegat
 
         }
     }
-    @IBAction func iCloudUnlock(_ sender: Any) {
-        //SerialConnectBTN.title = NSLocalizedString("Connect", comment: "")
-        
-        self.performSegue(withIdentifier: "iCloud", sender: sender)
-    }
-    
-    
-    
+
 
     @IBAction func RebootiDevice(_ sender: Any) {
         let command = "reset".data(using: .utf8)! + Data([0x0A])
@@ -560,7 +553,7 @@ class ViewController: NSViewController, ORSSerialPortDelegate,NSTextFieldDelegat
                                     SaveToFile.nameFieldStringValue = "\(self.DetectedDevice.stringValue)_\(self.Model)_\(self.SN)"
                                        SaveToFile.begin { (result) -> Void in
 
-                                           if result.rawValue == NSFileHandlingPanelOKButton {
+                                           if result == NSApplication.ModalResponse.OK {
                                                let filename = SaveToFile.url
 
                                                do {
@@ -622,7 +615,7 @@ class ViewController: NSViewController, ORSSerialPortDelegate,NSTextFieldDelegat
         openFile.canCreateDirectories = false
         openFile.canChooseFiles = true
         openFile.begin { (result) -> Void in
-            if result.rawValue == NSFileHandlingPanelOKButton {
+            if result == NSApplication.ModalResponse.OK {
                 //Do what you will
                 restoreBackupPath = openFile.url
                 self.performSegue(withIdentifier: "restoreBackup", sender: sender)
@@ -636,33 +629,31 @@ class ViewController: NSViewController, ORSSerialPortDelegate,NSTextFieldDelegat
         let template_path = path! + "/SYSCFG_TEMPLATES/"
         let path_ = template_path + selectedItem!
         print(path_)
-        do {
-            let file = try NSData(contentsOfFile: path_)
-            let str = String(data: file as! Data, encoding: .utf8)
-                var commandArray = (str?.split(separator: "\n"))!
-                
-                // Parsing if Backup by JC or WL
-                if commandArray.count == 1{
-                    print("Backup by JC or WL detected")
-                    let char = String(data: Data([0x0D,0x0A]), encoding: .utf8)!
-                    let char1 = char.last
-                    commandArray = (str?.split(separator: char1!))!
-                    print(commandArray.count)
-                }
-                for command in commandArray {
-                    if command.contains("syscfg") || command.contains("rtc --set") {
-                            print(String(command))
-                             let com = (String(command).data(using: .utf8)! + Data([0x0A]))
-                            port.send(com)
-                    } else {
-                        print("Command invalid")
-                }
-            }
-            parseColor()
+
+        let file = NSData(contentsOfFile: path_)
+        let str = String(data: file! as Data, encoding: .utf8)
+            var commandArray = (str?.split(separator: "\n"))!
             
-        } catch {
-            print(error)
+            // Parsing if Backup by JC or WL
+            if commandArray.count == 1{
+                print("Backup by JC or WL detected")
+                let char = String(data: Data([0x0D,0x0A]), encoding: .utf8)!
+                let char1 = char.last
+                commandArray = (str?.split(separator: char1!))!
+                print(commandArray.count)
+            }
+            for command in commandArray {
+                if command.contains("syscfg") || command.contains("rtc --set") {
+                        print(String(command))
+                         let com = (String(command).data(using: .utf8)! + Data([0x0A]))
+                        port.send(com)
+                } else {
+                    print("Command invalid")
+            }
         }
+        parseColor()
+            
+        
     
     }
     
@@ -821,7 +812,6 @@ class ViewController: NSViewController, ORSSerialPortDelegate,NSTextFieldDelegat
         //print(output!)
         if (output?.contains("list"))! {
             SysCFGBackup = output!
-            print(output)
         }
         if (output?.contains("NAND"))! {
             switch deviceAge {
@@ -1203,7 +1193,44 @@ class ViewController: NSViewController, ORSSerialPortDelegate,NSTextFieldDelegat
     @IBAction func factReset(_ sender: Any) {
         factoryResetDevice()
     }
+    
+    
     func factoryResetDevice() {
+             let alert = NSAlert()
+             alert.messageText = "Warning!"
+             alert.informativeText = "You are about to factory reset your device. This will erase all device content and settings. This can't be undone after restarted!\nAre you sure that you want to continue?"
+             alert.addButton(withTitle: "Yes, erase my device!")
+             alert.addButton(withTitle: "Cancel")
+             let i = alert.runModal()
+
+             switch i {
+             case .alertFirstButtonReturn:
+                 port.send("nvram --set oblit-inprogress 5".data(using: .utf8)! + Data([0x0A, 0x0D]))
+                 port.send("nvram --save".data(using: .utf8)! + Data([0x0A, 0x0D]))
+                 let alert = NSAlert()
+                 alert.messageText = "Commands successfully sent to your iDevice! When rebooting your device, it will start to erase all contents and settings from the device.\nReboot the device now by the button in MagicCFG\nKeep the device connected to a power source and wait until it booted up successfully!"
+                 alert.addButton(withTitle: "Okay")
+                 alert.runModal()
+             case .alertSecondButtonReturn:
+                 break
+             default:
+                 break
+             }
+         }
+    
+    
+    @IBAction func fixFacetime(_ sender: Any) {
+        let command = "syscfg add SwBh 0x00000001 0x00000000 0x00000000 0x00000000".data(using: .utf8)! + Data([0x0A])
+                port.send(command)
+                delay(bySeconds: 0.5) {
+                    let alert = NSAlert()
+                    alert.messageText = "Patch successful written to iDevice"
+
+                    alert.beginSheetModal(for: self.view.window!) { (reponse) in
+                        print("Facetime fixed!", logLevel:.INFO)
+                    }
+
+            }
     }
     
     

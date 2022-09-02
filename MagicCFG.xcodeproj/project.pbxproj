@@ -11,6 +11,8 @@
 		E4214CF624A63C5900763B57 /* devices.json in Resources */ = {isa = PBXBuildFile; fileRef = E4214CF524A63C5900763B57 /* devices.json */; };
 		E424D52D2493C3F300ECE732 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = E424D52C2493C3F300ECE732 /* ORSSerial */; };
 		E445927E24A6A06500605197 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E445927D24A6A06500605197 /* InfoViewController.swift */; };
+		E44DEE7528C2003C002774DE /* DumpSysCFGVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DEE7428C2003C002774DE /* DumpSysCFGVC.swift */; };
+		E44DEE7828C201D4002774DE /* Menu in Frameworks */ = {isa = PBXBuildFile; productRef = E44DEE7728C201D4002774DE /* Menu */; };
 		E453527928534B1300FB285E /* BTNS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E453527828534B1300FB285E /* BTNS.xcassets */; };
 		E4793E072492B934000ED452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4793E062492B934000ED452 /* AppDelegate.swift */; };
 		E4793E0B2492B936000ED452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4793E0A2492B936000ED452 /* Assets.xcassets */; };
@@ -28,6 +30,7 @@
 		E417CC68249EBA2000876CD7 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		E4214CF524A63C5900763B57 /* devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = devices.json; sourceTree = "<group>"; };
 		E445927D24A6A06500605197 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		E44DEE7428C2003C002774DE /* DumpSysCFGVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DumpSysCFGVC.swift; sourceTree = "<group>"; };
 		E45064382855DC390012A238 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E45064392855DC390012A238 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		E453527828534B1300FB285E /* BTNS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BTNS.xcassets; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E424D52D2493C3F300ECE732 /* ORSSerial in Frameworks */,
+				E44DEE7828C201D4002774DE /* Menu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,7 @@
 				E453527828534B1300FB285E /* BTNS.xcassets */,
 				E4214CF524A63C5900763B57 /* devices.json */,
 				E4793E0C2492B936000ED452 /* Main.storyboard */,
+				E44DEE7428C2003C002774DE /* DumpSysCFGVC.swift */,
 				E445927D24A6A06500605197 /* InfoViewController.swift */,
 				E4505E1324CB724200949905 /* Exensions&shit */,
 				E4793E0F2492B936000ED452 /* Info.plist */,
@@ -134,6 +139,7 @@
 			name = MagicCFG;
 			packageProductDependencies = (
 				E424D52C2493C3F300ECE732 /* ORSSerial */,
+				E44DEE7728C201D4002774DE /* Menu */,
 			);
 			productName = MagicCFG;
 			productReference = E4793E032492B934000ED452 /* MagicCFG.app */;
@@ -166,6 +172,7 @@
 			mainGroup = E4793DFA2492B934000ED452;
 			packageReferences = (
 				E424D52B2493C3F300ECE732 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+				E44DEE7628C201D4002774DE /* XCRemoteSwiftPackageReference "Menu" */,
 			);
 			productRefGroup = E4793E042492B934000ED452 /* Products */;
 			projectDirPath = "";
@@ -221,6 +228,7 @@
 				E48B41DF25974E040091370B /* YBFileLogger.swift in Sources */,
 				E48B41E025974E040091370B /* YBLoggerConfiguration.swift in Sources */,
 				E48B41E125974E040091370B /* YBLogger.swift in Sources */,
+				E44DEE7528C2003C002774DE /* DumpSysCFGVC.swift in Sources */,
 				E417CC6A249EBA2000876CD7 /* StartViewController.swift in Sources */,
 				E4793E072492B934000ED452 /* AppDelegate.swift in Sources */,
 				E445927E24A6A06500605197 /* InfoViewController.swift in Sources */,
@@ -366,9 +374,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20082022;
+				CURRENT_PROJECT_VERSION = 02092022;
 				DEVELOPMENT_TEAM = APU8P3QF97;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,7 +399,8 @@
 					"$(PROJECT_DIR)/MagicCFG",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = "Reloaded, OSV (v2.0)";
+				MARKETING_VERSION = "Reloaded, OSV (v2.1)";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiccfg.MagicCFGReloaded;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
@@ -411,14 +420,15 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20082022;
+				CURRENT_PROJECT_VERSION = 02092022;
 				DEVELOPMENT_TEAM = APU8P3QF97;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/include,
@@ -436,13 +446,14 @@
 					"$(PROJECT_DIR)/MagicCFG",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = "Reloaded, OSV (v2.0)";
-				ONLY_ACTIVE_ARCH = YES;
+				MARKETING_VERSION = "Reloaded, OSV (v2.1)";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiccfg.MagicCFGReloaded;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -479,6 +490,14 @@
 				minimumVersion = 2.1.0;
 			};
 		};
+		E44DEE7628C201D4002774DE /* XCRemoteSwiftPackageReference "Menu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iSapozhnik/Menu";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -486,6 +505,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E424D52B2493C3F300ECE732 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
 			productName = ORSSerial;
+		};
+		E44DEE7728C201D4002774DE /* Menu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E44DEE7628C201D4002774DE /* XCRemoteSwiftPackageReference "Menu" */;
+			productName = Menu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

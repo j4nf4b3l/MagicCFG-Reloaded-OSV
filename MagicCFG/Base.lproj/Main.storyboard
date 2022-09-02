@@ -1689,24 +1689,27 @@ by J4NF4 &amp; ZAO_SHEN</string>
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NS3-bb-Zdx">
-                                <rect key="frame" x="236" y="593" width="132" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Reloaded, OSV (v2.0)" id="1ss-aL-f71">
+                                <rect key="frame" x="236" y="593" width="130" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Reloaded, OSV (v2.1)" id="1ss-aL-f71">
                                     <font key="font" metaFont="systemLight" size="13"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y27-5C-wSn">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y27-5C-wSn">
                                 <rect key="frame" x="778" y="435" width="176" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="176" id="0hw-48-8bS"/>
                                     <constraint firstAttribute="height" constant="33" id="6dk-ab-05h"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" title="Advanced Diagnostics" bezelStyle="shadowlessSquare" image="btn_tmplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="dpo-qj-W2s">
+                                <buttonCell key="cell" type="square" title="Fix Facetime (e.g. UAE)" bezelStyle="shadowlessSquare" image="btn_tmplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="dpo-qj-W2s">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="contentTintColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="fixFacetime:" target="XfG-lQ-9wD" id="KTM-17-bNN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
