@@ -58,15 +58,19 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The app makes it possible to read, write and restore important configuration data on iDevices, making it an important tool for hobbyists and professional repair stores. It requires no accessories except for a DCSD cable / adapter and is therefore much cheaper and faster to use than with conventional NAND programmers from the Far East.
+Short summary:
+- Simple SysCFG Editor written in Swift. 
+- Pure Swift.
+- Just the editor.
 
-Please note that the source code doesn't include any files to boot into diags mode... You may need to add it yourself...
+To enter purple / diags mode, use Purple Pro by 1nsane_dev or a bootbox of your choice from far east...
+
+The app makes it possible to read, write and restore important configuration data on iDevices, making it an important tool for hobbyists and professional repair stores. It requires no accessories except for a DCSD cable / adapter and is therefore much cheaper and faster to use than with conventional NAND programmers from the Far East.
 
 This tool is mostly written in Swift and interacts with the syscfg partition of iDevices. So be careful in usage and make sure you understand what you are doing!
 
 Features:
 * Editing the device's sysCFG with ease, no need to solder and buy expensive programmers from China :)
-* Identify issues of your device in combination with [MagicCFG Diagnostics]()
 * Do NAND swaps easier
 * Other fun stuff...
 
